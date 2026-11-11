@@ -1,0 +1,10 @@
+---
+# cPanel deployment: copies the site into the Leafwood Advisory site at
+# leafwoodadvisory.com/portal/clients/emblaris/. Runs when "Deploy HEAD Commit"
+# is clicked in cPanel > Git Version Control. Never deletes files on the server.
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/leafwoodadvisory.com/portal/clients/emblaris/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/rsync -rv --no-perms --no-owner --no-group --exclude='.git' --exclude='.gitignore' --exclude='.cpanel.yml' --exclude='README.md' --exclude='config.php' --exclude='mail_config.php' --exclude='.env' --exclude='*.env' --exclude='*.zip' --exclude='*.bak' --exclude='error_log' ./ $DEPLOYPATH
+    - /bin/find $DEPLOYPATH -type d -exec /bin/chmod 755 {} + && /bin/find $DEPLOYPATH -type f -exec /bin/chmod 644 {} +

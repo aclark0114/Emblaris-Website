@@ -17,6 +17,7 @@ This repository holds the files for the Emblaris website (emblaris.ca). It is a 
 | `assets/mikaela-karlsson.jpg` | Mikaela's headshot |
 | `assets/favicon.svg` | The small icon shown in the browser tab |
 | `sitemap.xml`, `robots.txt` | Help search engines find the pages |
+| `.cpanel.yml` | Instructions the web host follows when publishing (see below) |
 
 ## Where to change text and images
 
@@ -40,6 +41,13 @@ Fonts load from Google Fonts, so the preview looks right only when you are onlin
 
 ## How changes reach the live site
 
-Publishing is manual. Saving a change in this repository does **not** change emblaris.ca. The live site changes only when the updated files are uploaded to the web host that serves emblaris.ca. When a change is ready, ask Andrew Clark at Leafwood Advisory to publish it.
+Saving a change in this repository does **not** publish it by itself. Publishing is a manual step in the hosting control panel (cPanel):
+
+1. In cPanel, open **Git Version Control** and click **Manage** next to `emblaris-website`.
+2. On the **Pull or Deploy** tab, click **Update from Remote**, then **Deploy HEAD Commit**.
+
+That copies the site to **leafwoodadvisory.com/portal/clients/emblaris/**. Andrew Clark at Leafwood Advisory has access to cPanel, so ask him to publish a change.
+
+This does not update **emblaris.ca**. That site is still updated separately, by uploading the files to its web host.
 
 After a change to `assets/styles.css` is published, browsers may keep showing the old look for a while. To avoid that, increase the number in `styles.css?v=` on every page (for example from `v=3` to `v=4`).

@@ -1,0 +1,22 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Server settings with real values (passwords, API keys, email settings).
+# Keep a *.sample version with placeholders in the repo instead.
+config.php
+mail_config.php
+.env
+*.env
+
+# Backups, archives and server logs
+*.bak
+*.zip
+error_log

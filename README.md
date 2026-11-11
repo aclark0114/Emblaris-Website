@@ -23,6 +23,7 @@ This repository holds the files for the Emblaris website (emblaris.ca). It is a 
 - **Text** lives in the `.html` file for each page. Open the file and look for the words you want to change; the text sits between tags such as `<p>...</p>` or `<h2>...</h2>`. Change only the words, not the parts in angle brackets.
 - **Contact details** (phone and email) appear in the footer of every page, so update all six `.html` files. They are also in a block near the top of each page that starts with `<script type="application/ld+json">`, which search engines read.
 - **Images** are in the `assets` folder. To replace the headshot, add a new image with the same name (`mikaela-karlsson.jpg`), ideally in the same 4:5 portrait shape.
+- **Client quotes**: the home page has a "What clients say" section that is hidden until real, approved quotes are added. Instructions are in a comment just above that section in `index.html`.
 
 You can edit files directly on GitHub: open the file, click the pencil icon, make the change, then click **Commit changes**.
 

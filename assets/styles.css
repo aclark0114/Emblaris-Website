@@ -224,6 +224,13 @@ p { margin: 0 0 1.1em; max-width: 68ch; }
 .section--green .cols-3 h3 { color: var(--white); }
 .cols-3 p { color: var(--ink-muted); font-size: 0.97rem; }
 
+/* What clients say (home page). Uses .cols-3 for the grid. */
+.testimonials[hidden] { display: none; }
+.testimonial figure, .testimonial blockquote { margin: 0; }
+.testimonial blockquote p { font-family: var(--serif); font-size: 1.2rem; line-height: 1.5; color: var(--green); margin: 0 0 20px; }
+.testimonial figcaption h3 { font-family: var(--sans); font-size: 1rem; font-weight: 600; color: var(--ink); margin: 0 0 2px; }
+.testimonial figcaption p { margin: 0; }
+
 /* Engagements (experience) */
 .engagement { display: grid; grid-template-columns: 220px 1fr 1fr; gap: 40px; padding: 48px 0; border-top: 1px solid var(--rule); }
 .engagement:last-of-type { border-bottom: 1px solid var(--rule); }
